@@ -6,10 +6,10 @@
 */
 
 // Constantes de  connxion à la BDD
-define('HOST', '');
-define('PORT', '');
-define('LOGIN', '');
-define('PASSW', '');
-define('BDD', '');
+define('HOST', 'localhost');
+define('PORT', '3306');
+define('LOGIN', 'multiweb');
+define('PASSW', '3h-m4Q@sLJ5$');
+define('BDD', 'clerc_multiburo');
 
 ?>

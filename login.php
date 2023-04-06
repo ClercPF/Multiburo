@@ -8,13 +8,17 @@
     <head>
         <title>Multiburo - Connexion</title>
         <meta charset="UTF-8">
-        <!-- Lien vers le fichier de style CSS -->
-        <link href="style.css" rel="stylesheet" type="text/css" media="screen">
+        <!-- Lien vers les fichiers de style CSS -->
+        <link href="css/base.css" rel="stylesheet" type="text/css" media="screen">
+        <link href="css/style.css" rel="stylesheet" type="text/css" media="screen">
         <!-- Lien vers le fichier de constantes PHP -->
         <?php include_once 'db.inc.php'; ?>
         
     </head>
     <body>
+        <!-- header de page -->
+        <?php include_once 'header.inc.php'; ?>
+
         <?php
             // Variables
             $email = '';
@@ -31,7 +35,7 @@
                 // Création de l'objet PDO
                 $cnx = new PDO('mysql:dbname='.BDD.';host='.HOST.';port='.PORT, LOGIN, PASSW);
                 // Preparation Requete
-                $stmt = $cnx->prepare("SELECT id_util 
+                $stmt = $cnx->prepare("SELECT id_util, nom_util, prenom_util, adr_util, cp_util, tel_util
                                     FROM utilisateur
                                     WHERE email_util = :cnx_email 
                                     AND mdp_util = :cnx_passw");
@@ -44,7 +48,14 @@
                 if($result = $stmt->fetch())
                 {
                     $_SESSION['user']['id'] = $result['id_util'];
-                    header('Location: reservation.php');
+                    $_SESSION['user']['nom'] = $result['nom_util'];
+                    $_SESSION['user']['prenom'] = $result['prenom_util'];
+                    $_SESSION['user']['adr'] = $result['adr_util'];
+                    $_SESSION['user']['cp'] = $result['cp_util'];
+                    $_SESSION['user']['ville'] = $result['ville_util'];
+                    $_SESSION['user']['tel'] = $result['tel_util'];
+                    $_SESSION['user']['email'] = $email;
+                    header('Location: index.php');
                 }
                 else
                     $message = '<p>Erreur lors de la connexion.</p>';
@@ -56,7 +67,7 @@
             <form action="login.php" method="post">
                 <div><label for="email">Email</label><input name="email" type="text"></div>
                 <div><label for="passw">Password</label><input name="passw" type="password"></div>
-                <div class="barreBouton"><input type="submit"></div>
+                <div class="barreBouton"><input type="submit" class="btn"></div>
                 <div><?php echo $message; ?></div>
             </form>
         </div>
