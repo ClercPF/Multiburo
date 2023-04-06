@@ -19,8 +19,8 @@
         <!-- header de page -->
         <?php include_once 'header.inc.php'; ?>
         
-        <div class="conteneur">
-            <h1>Réservation</h1>
+        <div class="conteneur_l">
+            <h1>Liste des réservations</h1>
             <?php
                 // Session User
                 if(isset($_SESSION['user']['id']))
@@ -41,16 +41,17 @@
                     $stmt->bindParam(':id_util', $id_util, PDO::PARAM_INT);
                     // Execution Requete
                     $stmt->execute();
+                    echo '<table><thead><tr><th>Numéro</th><th>Date</th><th>Type</th><th>Emplacement</th></thead></tr>';
                     // Fetch Requete
                     if($result = $stmt->fetchAll())
                     {
-                        echo '<table><tr><th>Réservation</th><th>Date</th><th>Type</th><th>Emplacement</th></tr>';
                         foreach($result as $ligne)
                         {
                             echo '<tr><td>'.$ligne['id_res'].'</td><td>'.$ligne['date_res'].'</td><td>'.$ligne['lib_type'].'</td><td>'.$ligne['lib_ress'].'</td></tr>';
                         }
-                        echo '</table>';
                     }
+                    echo '</table>';
+                    echo '<div class="barreBouton"><input type="button" class="btn" value="Reserver" onclick="window.location.href=\'reservation_add1.php\'"></div>';
                     
                 }
                 else

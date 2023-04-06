@@ -66,7 +66,7 @@ h1
     margin: 0 10px;
 }
 
-.conteneur
+.conteneur, .conteneur_l
 {
     margin: auto;
     margin-top: 200px;
@@ -77,12 +77,17 @@ h1
     color: #f0ffff;;
 }
 
-.conteneur div
+.conteneur_l
+{
+    min-width: 600px;
+}
+
+.conteneur div, .conteneur_l div
 {
    padding: 5px;
 }
 
-.conteneur div p
+.conteneur div p, .conteneur_l div p
 {
    margin: 0;
 }
@@ -122,4 +127,25 @@ input
 .btn:hover {
     padding: 10px;
     background-color: #fedd22;
+}
+
+table
+{
+    margin: auto;
+    border-collapse:collapse;
+    color: #f0ffff;
+}
+
+td, th
+{
+    border: 1px solid #f0ffff !important;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+thead th
+{
+    /*color: #fedd22;*/
+    font-weight: bold;
+    min-width:50px;
 }
