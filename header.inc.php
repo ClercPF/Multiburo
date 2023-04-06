@@ -5,8 +5,18 @@
 -->
 
 <div class="header">
+    <!-- Logo Multiburo -->
     <div><a href="index.php">MULTIBURO</a></div>
-    <div></div>
+
+    <!-- Menu -->
+    <div class="menu">
+        <ul>
+            <li><a href="index.php">Abonnement</a></li>
+            <li><a href="reservation.php">Reservation</a></li>
+        </ul>
+    </div>
+
+    <!-- Login / Logout -->
     <div>
         <?php
             // Variables

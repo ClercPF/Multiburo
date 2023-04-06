@@ -6,8 +6,8 @@ body
 h1
 {
     text-align: center;
-    color: #000000;
-    text-decoration: underline;
+    color: #f0ffff;
+    font-weight: bold;
     margin: 30px 0px;
 }
 
@@ -19,15 +19,16 @@ h1
     display: flex;
 }
 
-.header div:nth-child(1), .header div:nth-child(3)
+.header div
 {
-    flex: 1;
-    color: azure;
+    
+    color: #f0ffff;
     margin: auto 0;
 }
 
 .header div:nth-child(1)
 {
+    flex: 1;
     font-size: 2em;
     padding-left: 30px;
 }
@@ -39,6 +40,7 @@ h1
 
 .header div:nth-child(3)
 {
+    flex: 1;
     font-size: 1.3em;
     padding-right: 30px;
     text-align: right;
@@ -48,7 +50,20 @@ h1
 {
     margin-right: 10px;
     text-decoration: none;
-    color: azure;
+    color: #f0ffff;
+}
+
+.menu a:hover
+{
+    color: #fedd22;
+}
+
+.menu li
+{
+    list-style: none;
+    display:inline-block;
+    font-size: 1.5em;
+    margin: 0 10px;
 }
 
 .conteneur
@@ -59,6 +74,7 @@ h1
     width: 400px;
     background: #22c1c3;
     background: linear-gradient(180deg, rgb(36, 206, 209) 0%, rgb(33, 184, 186) 100%); 
+    color: #f0ffff;;
 }
 
 .conteneur div
@@ -95,7 +111,7 @@ input
     padding: 10px;
     font-family: arial;
     font-size: 1em;
-    background-color: #fedd22;
+    background-color: #f0ffff;
     border-radius: 24px;
     -webkit-border-radius: 24px;
     -moz-border-radius: 24px;
@@ -105,6 +121,5 @@ input
     
 .btn:hover {
     padding: 10px;
-    color: #323232;
-    background-color: #d8c72a;
+    background-color: #fedd22;
 }
