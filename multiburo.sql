@@ -118,3 +118,35 @@ TO 'multiweb'@'localhost';
 GRANT INSERT, UPDATE, DELETE 
 ON clerc_multiburo.ligneres
 TO 'multiweb'@'localhost';
+
+-- Création de Ressources pour les essais
+INSERT INTO ressource(lib_ress, nb_place_ress, code_type)
+VALUES('B01', 1, 'BI');
+INSERT INTO ressource(lib_ress, nb_place_ress, code_type)
+VALUES('B02', 1, 'BI');
+INSERT INTO ressource(lib_ress, nb_place_ress, code_type)
+VALUES('B03', 1, 'BI');
+INSERT INTO ressource(lib_ress, nb_place_ress, code_type)
+VALUES('B04', 1, 'BI');
+INSERT INTO ressource(lib_ress, nb_place_ress, code_type)
+VALUES('B05', 1, 'BI');
+INSERT INTO ressource(lib_ress, nb_place_ress, code_type)
+VALUES('B06', 1, 'BI');
+INSERT INTO ressource(lib_ress, nb_place_ress, code_type)
+VALUES('P10', 1, 'OS');
+INSERT INTO ressource(lib_ress, nb_place_ress, code_type)
+VALUES('P12', 1, 'OS');
+INSERT INTO ressource(lib_ress, nb_place_ress, code_type)
+VALUES('P14', 1, 'OS');
+INSERT INTO ressource(lib_ress, nb_place_ress, code_type)
+VALUES('P16', 1, 'OS');
+INSERT INTO ressource(lib_ress, nb_place_ress, code_type)
+VALUES('P18', 1, 'OS');
+INSERT INTO ressource(lib_ress, nb_place_ress, code_type)
+VALUES('P20', 1, 'OS');
+INSERT INTO ressource(lib_ress, nb_place_ress, code_type)
+VALUES('S01', 8, 'SR');
+INSERT INTO ressource(lib_ress, nb_place_ress, code_type)
+VALUES('S02', 4, 'SR');
+INSERT INTO ressource(lib_ress, nb_place_ress, code_type)
+VALUES('S03', 10, 'SR');

@@ -149,3 +149,17 @@ thead th
     font-weight: bold;
     min-width:50px;
 }
+
+.msgok
+{
+    text-align: center;
+    color: #fedd22;
+    font-size: 1.2em;
+}
+
+.msgpasok
+{
+    text-align: center;
+    color: #db0000;
+    font-size: 1.2em;
+}

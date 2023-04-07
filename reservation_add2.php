@@ -60,7 +60,7 @@
                     {
                         foreach($result as $ligne)
                         {
-                            echo '<tr><td>'.$ligne['lib_type'].'</td><td>'.$ligne['lib_ress'].'</td><td>'.$ligne['nb_place_ress'].'</td><td><img src="images/book.png" onclick="window.location.href=\'reservation_save.php?id_ress='.$ligne['id_ress'].'\'"></img></td></tr>';
+                            echo '<tr><td>'.$ligne['lib_type'].'</td><td>'.$ligne['lib_ress'].'</td><td>'.$ligne['nb_place_ress'].'</td><td><img src="images/book.png" onclick="window.location.href=\'reservation_save.php?id_ress='.$ligne['id_ress'].'&date='.$day.'\'"></img></td></tr>';
                         }  
                     }
                     echo '</table>
