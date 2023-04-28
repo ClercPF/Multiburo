@@ -17,10 +17,11 @@
         <!-- header de page -->
         <?php include_once 'header.inc.php'; ?>
         
+        <!-- Conteneur principal -->
         <div class="conteneur">
             <h1>Réservation</h1>
             <?php
-                // Session User
+                // User Connecté / Redirection Login
                 if(isset( $_SESSION['user']['id']))
                 {
                     echo '<form action="reservation_add2.php" method="post">
